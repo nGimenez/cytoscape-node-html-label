@@ -183,6 +183,8 @@
                             position: getNodePosition(d),
                             data: d.data()
                         });
+                        console.log(_lc._elements[d.id()]);
+                        d.style({ 'height': _lc._elements[d.id()].getNode().offsetHeight });
                     }
                 });
             });

@@ -198,7 +198,7 @@ declare module 'cytoscape-node-html-label'
    * it don't know about cy.
    */
   class LabelContainer {
-    private _elements: HashTableElements;
+    public _elements: HashTableElements;
     private _node: HTMLElement;
 
     constructor(node: HTMLElement) {
@@ -307,6 +307,8 @@ declare module 'cytoscape-node-html-label'
               position: getNodePosition(d),
               data: d.data()
             });
+            console.log(_lc._elements[d.id()]);
+            d.style({ 'height': _lc._elements[d.id()].getNode().offsetHeight});
           }
         });
       });
