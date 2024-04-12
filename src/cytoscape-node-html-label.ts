@@ -309,6 +309,7 @@ declare module 'cytoscape-node-html-label'
             });
             console.log(_lc._elements[d.id()]);
             d.style({ 'height': _lc._elements[d.id()].getNode().offsetHeight});
+            d.style({ 'width': _lc._elements[d.id()].getNode().offsetWidth});
           }
         });
       });
